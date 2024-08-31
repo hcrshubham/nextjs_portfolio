@@ -18,6 +18,7 @@ const Index = () => {
       <Head>
         <title>Shubham Kumar Sharma</title>
         <meta name="description" content="I'm Shubham Kumar Sharma, a passionate full-stack developer with a love for traveling and photography." />
+        <meta name="google-site-verification" content="mCNAW1QY-E0MfAdAIMeLUuSxWWRRmCYiAeskhOHE-TM" />
       </Head>
       <Home dark />
       {/* HERO */}
