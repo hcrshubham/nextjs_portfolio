@@ -1,11 +1,18 @@
-import parse from "html-react-parser";
-import { useEffect, useState } from "react";
-import { fatchData } from "../utilits";
+import parse from 'html-react-parser';
+import { useEffect, useState } from 'react';
+import { fatchData } from '../utilits';
+import Image from 'next/image';
 
 const Home = ({ dark }) => {
   const [data, setData] = useState({});
-  useEffect(async () => {
-    setData(await fatchData("/static/info.json"));
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const fetchedData = await fatchData('/static/info.json');
+      setData(fetchedData);
+    };
+
+    fetchData();
   }, []);
 
   return (
@@ -14,21 +21,21 @@ const Home = ({ dark }) => {
         <div
           className="background"
           data-img-url={`img/slider/${dark ? 2 : 1}.jpg`}
-          // style={{ backgroundImage: `img/slider/${dark ? 2 : 1}.jpg` }}
+          // style={{ backgroundImage: `url(img/slider/${dark ? 2 : 1}.jpg)` }}
         />
         <div className="container">
           <div className="content">
             <div className="details">
               <div className="hello">
-                <h3 className="orangeText">{`Hello, I'm`}</h3>
+                <h3 className="orangeText">Hello, I'm</h3>
               </div>
               <div className="name">
-                <h3>{data && data.name ? data.name : "name"}</h3>
+                <h3>{data.name ? data.name : 'Name'}</h3>
               </div>
               <div className="job">
                 <p>
-                  A <span className="greenText">{data && data.mainSkill}</span>{" "}
-                  From <span className="purpleText">{data.address}</span>
+                  A <span className="greenText">{data.mainSkill}</span> From{' '}
+                  <span className="purpleText">{data.address}</span>
                 </p>
               </div>
               <div className="text">
@@ -42,11 +49,10 @@ const Home = ({ dark }) => {
                 </div>
                 <div className="social">
                   <ul>
-                    {data &&
-                      data.social &&
+                    {data.social &&
                       data.social.map((social, i) => (
                         <li key={i}>
-                          <a href="#">
+                          <a href={social.link || '#'}>
                             <i className={social.icon} />
                           </a>
                         </li>
@@ -57,12 +63,13 @@ const Home = ({ dark }) => {
             </div>
             <div className="avatar">
               <div className="image">
-                <img
-                  src={data && data.img ? data.img : "/img/slider/avatar.png"}
-                  alt="image"
+                <Image
+                  src={data.img || '/img/slider/avatar.png'}
+                  alt="Avatar"
+                  width={300} // Adjust as needed
+                  height={300} // Adjust as needed
                 />
-                {data &&
-                  data.skills &&
+                {data.skills &&
                   data.skills.map(
                     (skill, i) =>
                       skill.icon && (
@@ -88,19 +95,19 @@ const Home = ({ dark }) => {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
               style={{
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                strokeMiterlimit: "1.5",
+                fillRule: 'evenodd',
+                clipRule: 'evenodd',
+                strokeLinecap: 'round',
+                strokeLinejoin: 'round',
+                strokeMiterlimit: '1.5',
               }}
             >
               <path
                 id="wheel"
                 d="M123.359,79.775l0,72.843"
                 style={{
-                  fill: "none",
-                  stroke: dark ? "#fff" : "#000",
+                  fill: 'none',
+                  stroke: dark ? '#fff' : '#000',
                   strokeWidth: 20,
                 }}
               />
@@ -108,8 +115,8 @@ const Home = ({ dark }) => {
                 id="mouse"
                 d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z"
                 style={{
-                  fill: "none",
-                  stroke: dark ? "#fff" : "#000",
+                  fill: 'none',
+                  stroke: dark ? '#fff' : '#000',
                   strokeWidth: 20,
                 }}
               />
@@ -120,4 +127,5 @@ const Home = ({ dark }) => {
     </div>
   );
 };
+
 export default Home;
