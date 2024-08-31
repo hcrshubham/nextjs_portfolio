@@ -13,8 +13,8 @@ const About = ({ dark }) => {
                   src={`/img/about/${dark ? 2 : 1}.jpg`}
                   alt="About Image"
                   id="aboutImg"
-                  width={600} // Adjust width as needed
-                  height={600} // Adjust height as needed
+                  width={350} // Adjust width as needed
+                  height={450} // Adjust height as needed
                 />
                 <div className="numbers year">
                   <div className="wrapper">
