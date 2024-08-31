@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const DetailsPopup = ({ open, close }) => {
   return (
     <div className={`dizme_tm_modalbox ${open ? "opened" : ""}`}>
@@ -10,7 +12,12 @@ const DetailsPopup = ({ open, close }) => {
         <div className="description_wrap">
           <div className="popup_details">
             <div className="top_image">
-              <img src="img/thumbs/4-2.jpg" alt="image" />
+              <Image
+                src="img/thumbs/4-2.jpg"
+                alt="Top image"
+                width={600} // Adjust width as needed
+                height={400} // Adjust height as needed
+              />
               <div
                 className="main"
                 data-img-url="img/portfolio/6.jpg"
@@ -63,7 +70,12 @@ const DetailsPopup = ({ open, close }) => {
                 <li>
                   <div className="list_inner">
                     <div className="my_image">
-                      <img src="img/thumbs/4-2.jpg" alt="image" />
+                      <Image
+                        src="img/thumbs/4-2.jpg"
+                        alt="Additional image 1"
+                        width={600} // Adjust width as needed
+                        height={400} // Adjust height as needed
+                      />
                       <div
                         className="main"
                         data-img-url="img/portfolio/1.jpg"
@@ -77,7 +89,12 @@ const DetailsPopup = ({ open, close }) => {
                 <li>
                   <div className="list_inner">
                     <div className="my_image">
-                      <img src="img/thumbs/4-2.jpg" alt="image" />
+                      <Image
+                        src="img/thumbs/4-2.jpg"
+                        alt="Additional image 2"
+                        width={600} // Adjust width as needed
+                        height={400} // Adjust height as needed
+                      />
                       <div
                         className="main"
                         data-img-url="img/portfolio/2.jpg"
@@ -91,7 +108,12 @@ const DetailsPopup = ({ open, close }) => {
                 <li>
                   <div className="list_inner">
                     <div className="my_image">
-                      <img src="img/thumbs/4-2.jpg" alt="image" />
+                      <Image
+                        src="img/thumbs/4-2.jpg"
+                        alt="Additional image 3"
+                        width={600} // Adjust width as needed
+                        height={400} // Adjust height as needed
+                      />
                       <div
                         className="main"
                         data-img-url="img/portfolio/3.jpg"
@@ -110,4 +132,5 @@ const DetailsPopup = ({ open, close }) => {
     </div>
   );
 };
+
 export default DetailsPopup;

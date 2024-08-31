@@ -1,10 +1,12 @@
 import React, { Fragment, useEffect, useState } from "react";
 import useClickOutside from "../../useClickOutside";
+import Image from 'next/image';
 
 const ImgViews = ({ close, src }) => {
   let domNode = useClickOutside(() => {
     close(false);
   });
+
   return (
     <Fragment>
       <div className="mfp-bg mfp-ready" onClick={() => close(false)}></div>
@@ -26,7 +28,13 @@ const ImgViews = ({ close, src }) => {
               >
                 ×
               </button> */}
-              <img className="mfp-img" src={src} />
+              <Image
+                className="mfp-img"
+                src={src}
+                alt="Image view"
+                layout="fill" // Ensure the container is styled to handle this layout
+                objectFit="contain" // Adjust as needed for proper display
+              />
             </div>
           </div>
           <div className="mfp-preloader">Loading...</div>
@@ -56,10 +64,12 @@ const ImageView = () => {
       });
     }, 1500);
   }, []);
+
   return (
     <Fragment>
       {img && <ImgViews close={() => setImg(false)} src={imgValue} />}
     </Fragment>
   );
 };
+
 export default ImageView;

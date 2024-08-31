@@ -1,4 +1,6 @@
 import Counter from "./Counter";
+import Image from 'next/image';
+
 const About = ({ dark }) => {
   return (
     <div className="dizme_tm_section" id="about">
@@ -7,7 +9,13 @@ const About = ({ dark }) => {
           <div className="wrapper">
             <div className="left">
               <div className="image">
-                <img src={`img/about/${dark ? 2 : 1}.jpg`} alt="image" id="aboutImg"/>
+              <Image
+                  src={`/img/about/${dark ? 2 : 1}.jpg`}
+                  alt="About Image"
+                  id="aboutImg"
+                  width={600} // Adjust width as needed
+                  height={600} // Adjust height as needed
+                />
                 <div className="numbers year">
                   <div className="wrapper">
                     <h3>

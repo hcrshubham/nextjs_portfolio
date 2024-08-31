@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2"; // Import SweetAlert
 import { fatchData } from "../utilits";
+import Image from 'next/image';
 
 const Contact = () => {
   const [data, setData] = useState({});
@@ -135,7 +136,6 @@ const Contact = () => {
                             htmlFor="name"
                             className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FF6464] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
                           >
-                        
                           </label>
                         </div>
                       </li>
@@ -153,7 +153,6 @@ const Contact = () => {
                             htmlFor="email"
                             className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
                           >
-                            
                           </label>
                         </div>
                       </li>
@@ -186,12 +185,12 @@ const Contact = () => {
               </div>
             </div>
             <div className="brush_2 wow fadeInRight" data-wow-duration="1s">
-              <img src="img/brushes/contact/2.png" alt="image" />
+              <Image src="/img/brushes/contact/2.png" alt="Brush 2" width={200} height={200} />
             </div>
           </div>
         </div>
         <div className="brush_1 wow fadeInLeft" data-wow-duration="1s">
-          <img src="img/brushes/contact/1.png" alt="image" />
+          <Image src="/img/brushes/contact/1.png" alt="Brush 1" width={200} height={200} />
         </div>
       </div>
     </div>
