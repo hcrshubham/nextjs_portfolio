@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import Swal from "sweetalert2"; // Import SweetAlert
-import { fatchData } from "../utilits";
+import { useEffect, useState } from 'react';
+import Swal from 'sweetalert2'; // Import SweetAlert
+import { fatchData } from '../utilits';
 import Image from 'next/image';
 
 const Contact = () => {
@@ -9,7 +9,7 @@ const Contact = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      setData(await fatchData("/static/info.json"));
+      setData(await fatchData('/static/info.json'));
     };
     fetchData();
   }, []);
@@ -19,21 +19,21 @@ const Contact = () => {
 
     // Submit the form using the fetch API
     fetch(
-      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSd3uI_C0d775tQyk6yeLwUdvj7f1ZQt_mbksgJg2SnCDiMD2g/formResponse",
+      'https://docs.google.com/forms/u/0/d/e/1FAIpQLSd3uI_C0d775tQyk6yeLwUdvj7f1ZQt_mbksgJg2SnCDiMD2g/formResponse',
       {
-        method: "POST",
+        method: 'POST',
         body: new FormData(e.target),
-        mode: "no-cors",
+        mode: 'no-cors',
       }
     ).then(() => {
       // Show SweetAlert on successful submission
       Swal.fire({
-        title: "Success!",
-        text: "Your message has been sent successfully.",
-        icon: "success",
-        confirmButtonText: "OK",
-        background: "#404352", // Custom background color
-        color: "#ffffff", // Set text color to white
+        title: 'Success!',
+        text: 'Your message has been sent successfully.',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        background: '#404352', // Custom background color
+        color: '#ffffff', // Set text color to white
         customClass: {
           popup: 'border-light', // Add a light border class
         },
@@ -54,7 +54,7 @@ const Contact = () => {
             <span>Contact Me</span>
             <h3>I'm always open to discussing</h3>
             <p>
-              Please fill out the form on this section to contact me. Or
+              Please fill out the form on this section to contact with me. Or
               call between 10:00 a.m. and 8:00 p.m. ET, Monday through Friday.
             </p>
           </div>
@@ -105,7 +105,7 @@ const Contact = () => {
             <div
               className="right wow fadeInRight"
               data-wow-duration="1s"
-              id="contactForm"
+              id="contectForm"
             >
               <div className="fields">
                 <form
@@ -118,7 +118,7 @@ const Contact = () => {
                     data-success="Your message has been received, We will contact you soon."
                   />
                   <div className="empty_notice">
-                    <span>Please fill required fields</span>
+                    <span>Please Fill Required Fields</span>
                   </div>
                   <div className="input_list">
                     <ul>
@@ -173,7 +173,7 @@ const Contact = () => {
                     >
                     </label>
                   </div>
-                  
+
                   <div className="dizme_tm_button mt-3">
                     <input
                       type="submit"
@@ -198,4 +198,3 @@ const Contact = () => {
 };
 
 export default Contact;
-//C
