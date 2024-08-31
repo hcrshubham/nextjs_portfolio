@@ -52,7 +52,7 @@ const Contact = () => {
         <div className="container">
           <div className="dizme_tm_main_title" data-align="center">
             <span>Contact Me</span>
-            <h3>I'm always open to discussing</h3>
+            <h3>I&apos;m always open to discussing</h3>
             <p>
               Please fill out the form on this section to contact with me. Or
               call between 10:00 a.m. and 8:00 p.m. ET, Monday through Friday.
