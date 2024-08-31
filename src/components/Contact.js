@@ -54,7 +54,7 @@ const Contact = () => {
             <span>Contact Me</span>
             <h3>I'm always open to discussing</h3>
             <p>
-              Please fill out the form on this section to contact with me. Or
+              Please fill out the form on this section to contact me. Or
               call between 10:00 a.m. and 8:00 p.m. ET, Monday through Friday.
             </p>
           </div>
@@ -105,7 +105,7 @@ const Contact = () => {
             <div
               className="right wow fadeInRight"
               data-wow-duration="1s"
-              id="contectForm"
+              id="contactForm"
             >
               <div className="fields">
                 <form
@@ -118,7 +118,7 @@ const Contact = () => {
                     data-success="Your message has been received, We will contact you soon."
                   />
                   <div className="empty_notice">
-                    <span>Please Fill Required Fields</span>
+                    <span>Please fill required fields</span>
                   </div>
                   <div className="input_list">
                     <ul>

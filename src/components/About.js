@@ -9,7 +9,7 @@ const About = ({ dark }) => {
           <div className="wrapper">
             <div className="left">
               <div className="image">
-              <Image
+                <Image
                   src={`/img/about/${dark ? 2 : 1}.jpg`}
                   alt="About Image"
                   id="aboutImg"
@@ -64,13 +64,24 @@ const About = ({ dark }) => {
           </div>
         </div>
         <div className="brush_1 wow fadeInLeft" data-wow-duration="1s">
-          <img src="img/brushes/about/1.png" alt="image" />
+          <Image
+            src="/img/brushes/about/1.png"
+            alt="Brush 1"
+            width={100} // Adjust width as needed
+            height={100} // Adjust height as needed
+          />
         </div>
         <div className="brush_2 wow fadeInRight" data-wow-duration="1s">
-          <img src="img/brushes/about/2.png" alt="image" />
+          <Image
+            src="/img/brushes/about/2.png"
+            alt="Brush 2"
+            width={100} // Adjust width as needed
+            height={100} // Adjust height as needed
+          />
         </div>
       </div>
     </div>
   );
 };
+
 export default About;
