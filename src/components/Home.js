@@ -86,7 +86,7 @@ const Home = ({ dark }) => {
           </div>
         </div>
         <div className="dizme_tm_down">
-          <a className="anchor" href="#process">
+          <a className="anchor" href="#about">
             <svg
               width="26px"
               height="100%"
