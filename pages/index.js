@@ -17,7 +17,7 @@ const Index = () => {
     <Layout dark>
       <Head>
         <meta charSet="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta property="og:description" content="I'm Shubham Kumar Sharma, a passionate full-stack developer with a love for traveling and photography." />
         <meta name="theme-color" content="#EB625A" />
