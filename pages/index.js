@@ -16,8 +16,26 @@ const Index = () => {
   return (
     <Layout dark>
       <Head>
-        <title>Shubham Kumar Sharma</title>
+        <meta charSet="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta property="og:description" content="I'm Shubham Kumar Sharma, a passionate full-stack developer with a love for traveling and photography." />
+        <meta name="theme-color" content="#EB625A" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Shubham Kumar Sharma" />
+        <meta property="og:site_name" content="Shubham Kumar Sharma" />
+        <meta name="twitter:title" content="Shubham Kumar Sharma" />
+        <meta property="twitter:domain" content="shubhamkumarsharma.com" />
+        <meta name="twitter:creator" content="@hcrshubham" />
         <meta name="description" content="I'm Shubham Kumar Sharma, a passionate full-stack developer with a love for traveling and photography." />
+        <meta property="og:description" content="I'm Shubham Kumar Sharma, a passionate full-stack developer with a love for traveling and photography." />
+        <meta name="twitter:description" content="I'm Shubham Kumar Sharma, a passionate full-stack developer with a love for traveling and photography." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://shubhamkumarsharma.com" />
+        <meta property="og:url" content="https://shubhamkumarsharma.com" />
+        <meta property="twitter:url" content="https://shubhamkumarsharma.com" />
+        <title>Shubham Kumar Sharma</title>
+        <meta name="next-head-count" content="21" />
         <meta name="google-site-verification" content="mCNAW1QY-E0MfAdAIMeLUuSxWWRRmCYiAeskhOHE-TM" />
       </Head>
       <Home dark />
@@ -26,7 +44,7 @@ const Index = () => {
       <About dark />
       {/* /ABOUT */}
       {/* PORTFOLIO */}
-     
+
       <Newsletter />
       <Contact />
     </Layout>
